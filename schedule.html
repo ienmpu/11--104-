@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Сайт о Хоккее - Расписание</title>
+
+    <link href="img/favicon.png" rel="icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header" class="header fixed-top">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center rounded-circle">
+                <img class="rounded-circle" src="img/logo.svg" alt="Logo" height="64" width="64">
+            </a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto" href="schedule.html">Расписание</a></li>
+                    <li><a class="nav-link scrollto" href="#contact">Контакты</a></li>
+                    <li class="scrollto dropdown">
+                        <a class="keychainify-checked"><span>Войти</span><i class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="login.html" class="keychainify-checked">Войти</a></li>
+                            <li><a href="registration.html" class="keychainify-checked">Регистрация</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav>
+
+        </div>
+    </header>
+
+    <section id="hero" class="hero d-flex">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex flex-column justify-content-center">
+                    <h1 data-aos="fade-up">Каледарь</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <span class="btn btn-sm btn-outline-secondary" id="pastBtn" onclick="changeSchedule(this)">Прошедшие</span>
+                </div>
+                <div class="col-2">
+                    <span class="btn btn-sm btn-outline-secondary active" id="futureBtn" onclick="changeSchedule(this)">Будущие</span>
+                </div>
+            </div>
+
+            <div class="row mt-5" id="future">
+                <div class="row h-card">
+                    <div class="card-left col-1">
+                        <p class="card-number mt-4">#334</p>
+                        <p class="card-date mt-1">16.11.2022</p>
+                    </div>
+                    <div class="card-left-command col-4">
+                        <div class="row h-100">
+                            <div class="col-2 command-logo-container">
+                                <img class="command-logo" src="img/commands/vityaz.png" />
+                            </div>
+                            <div class="col-4 mt-4">
+                                <p class="command-name mt-3 mb-0">Витязь</p>
+                                <p class="command-city mt-2">Московская область</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-center col-3 text-center">
+                        <p class="card-time mt-4 mb-0">12:00 МСК</p>
+                        <p class="card-city">Хабаровск</p>
+                    </div>
+                    <div class="card-right-command col-4">
+                        <div class="row h-100">
+                            <div class="col mt-4">
+                                <p class="command-name mt-3 mb-0">Торпедо</p>
+                                <p class="command-city mt-2">Нижний Новгород</p>
+                            </div>
+                            <div class="col-2 command-logo-container">
+                                <img class="command-logo" src="img/commands/torpedo.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row h-card mt-3">
+                    <div class="card-left col-1">
+                        <p class="card-number mt-4">#335</p>
+                        <p class="card-date mt-1">16.11.2022</p>
+                    </div>
+                    <div class="card-left-command col-4">
+                        <div class="row h-100">
+                            <div class="col-2 command-logo-container">
+                                <img class="command-logo" src="img/commands/spartak.png" />
+                            </div>
+                            <div class="col-4 mt-4">
+                                <p class="command-name mt-3 mb-0">Спартак</p>
+                                <p class="command-city mt-2">Москва</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-center col-3 text-center">
+                        <p class="card-time mt-4 mb-0">19:30 МСК</p>
+                        <p class="card-city">Москва</p>
+                    </div>
+                    <div class="card-right-command col-4">
+                        <div class="row h-100">
+                            <div class="col mt-4">
+                                <p class="command-name mt-3 mb-0">Северсталь</p>
+                                <p class="command-city mt-2">Череповец</p>
+                            </div>
+                            <div class="col-2 command-logo-container">
+                                <img class="command-logo" src="img/commands/severstal.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row h-card mt-3">
+                    <div class="card-left col-1">
+                        <p class="card-number mt-4">#342</p>
+                        <p class="card-date mt-1">18.11.2022</p>
+                    </div>
+                    <div class="card-left-command col-4">
+                        <div class="row h-100">
+                            <div class="col-2 command-logo-container">
+                                <img class="command-logo" src="img/commands/torpedo.png" />
+                            </div>
+                            <div class="col-4 mt-4">
+                                <p class="command-name mt-3 mb-0">Торпедо</p>
+                                <p class="command-city mt-2">Нижний Новгород</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-center col-3 text-center">
+                        <p class="card-time mt-4 mb-0">19:00 МСК</p>
+                        <p class="card-city">Нижний Новгород</p>
+                    </div>
+                    <div class="card-right-command col-4">
+                        <div class="row h-100">
+                            <div class="col mt-4">
+                                <p class="command-name mt-3 mb-0">Северсталь</p>
+                                <p class="command-city mt-2">Череповец</p>
+                            </div>
+                            <div class="col-2 command-logo-container">
+                                <img class="command-logo" src="img/commands/severstal.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row h-card mt-3">
+                    <div class="card-left col-1">
+                        <p class="card-number mt-4">#343</p>
+                        <p class="card-date mt-1">18.11.2022</p>
+                    </div>
+                    <div class="card-left-command col-4">
+                        <div class="row h-100">
+                            <div class="col-2 command-logo-container">
+                                <img class="command-logo" src="img/commands/spartak.png" />
+                            </div>
+                            <div class="col-4 mt-4">
+                                <p class="command-name mt-3 mb-0">Спартак</p>
+                                <p class="command-city mt-2">Москва</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-center col-3 text-center">
+                        <p class="card-time mt-4 mb-0">19:30 МСК</p>
+                        <p class="card-city">Москва</p>
+                    </div>
+                    <div class="card-right-command col-4">
+                        <div class="row h-100">
+                            <div class="col mt-4">
+                                <p class="command-name mt-3 mb-0">ЦСКА</p>
+                                <p class="command-city mt-2">Москва</p>
+                            </div>
+                            <div class="col-2 command-logo-container">
+                                <img class="command-logo" src="img/commands/casc.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row h-card mt-3">
+                    <div class="card-left col-1">
+                        <p class="card-number mt-4">#352</p>
+                        <p class="card-date mt-1">20.11.2022</p>
+                    </div>
+                    <div class="card-left-command col-4">
+                        <div class="row h-100">
+                            <div class="col-2 command-logo-container">
+                                <img class="command-logo" src="img/commands/vityaz.png" />
+                            </div>
+                            <div class="col-4 mt-4">
+                                <p class="command-name mt-3 mb-0">Витязь</p>
+                                <p class="command-city mt-2">Московская область</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-center col-3 text-center">
+                        <p class="card-time mt-4 mb-0">17:00 МСК</p>
+                        <p class="card-city">Балашиха</p>
+                    </div>
+                    <div class="card-right-command col-4">
+                        <div class="row h-100">
+                            <div class="col mt-4">
+                                <p class="command-name mt-3 mb-0">ЦСКА</p>
+                                <p class="command-city mt-2">Москва</p>
+                            </div>
+                            <div class="col-2 command-logo-container">
+                                <img class="command-logo" src="img/commands/casc.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row h-card mt-3">
+                    <div class="card-left col-1">
+                        <p class="card-number mt-4">#357</p>
+                        <p class="card-date mt-1">21.11.2022</p>
+                    </div>
+                    <div class="card-left-command col-4">
+                        <div class="row h-100">
+                            <div class="col-2 command-logo-container">
+                                <img class="command-logo" src="img/commands/neftehimik.png" />
+                            </div>
+                            <div class="col-4 mt-4">
+                                <p class="command-name mt-3 mb-0">Нефтехимик</p>
+                                <p class="command-city mt-2">Нижнекамск</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-center col-3 text-center">
+                        <p class="card-time mt-4 mb-0">19:00 МСК</p>
+                        <p class="card-city">Нижнекамск</p>
+                    </div>
+                    <div class="card-right-command col-4">
+                        <div class="row h-100">
+                            <div class="col mt-4">
+                                <p class="command-name mt-3 mb-0">Адмирал</p>
+                                <p class="command-city mt-2">Владивосток</p>
+                            </div>
+                            <div class="col-2 command-logo-container">
+                                <img class="command-logo" src="img/commands/admiral.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5 d-none" id="past">
+                <div class="row h-card">
+                    <div class="card-left col-1">
+                        <p class="card-number mt-4">#276</p>
+                        <p class="card-date mt-1">03.11.2022</p>
+                    </div>
+                    <div class="card-left-command col-4">
+                        <div class="row h-100">
+                            <div class="col-2 command-logo-container">
+                                <img class="command-logo" src="img/commands/avangard.png" />
+                            </div>
+                            <div class="col-4 mt-4">
+                                <p class="command-name mt-3 mb-0">Авангард</p>
+                                <p class="command-city mt-2">Омск</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-center col-3 text-center">
+                        <p class="card-scores mt-5">3 - 2</p>
+                    </div>
+                    <div class="card-right-command col-4">
+                        <div class="row h-100">
+                            <div class="col mt-4">
+                                <p class="command-name mt-3 mb-0">Сибирь</p>
+                                <p class="command-city mt-2">Новосибирская область</p>
+                            </div>
+                            <div class="col-2 command-logo-container">
+                                <img class="command-logo" src="img/commands/sibir.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row h-card mt-3">
+                    <div class="card-left col-1">
+                        <p class="card-number mt-4">#277</p>
+                        <p class="card-date mt-1">03.11.2022</p>
+                    </div>
+                    <div class="card-left-command col-4">
+                        <div class="row h-100">
+                            <div class="col-2 command-logo-container">
+                                <img class="command-logo" src="img/commands/baris.png" />
+                            </div>
+                            <div class="col-4 mt-4">
+                                <p class="command-name mt-3 mb-0">Барыс</p>
+                                <p class="command-city mt-2">Астана</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-center col-3 text-center">
+                        <p class="card-scores mt-5">1 - 4</p>
+                    </div>
+                    <div class="card-right-command col-4">
+                        <div class="row h-100">
+                            <div class="col mt-4">
+                                <p class="command-name mt-3 mb-0">Адмирал</p>
+                                <p class="command-city mt-2">Владивосток</p>
+                            </div>
+                            <div class="col-2 command-logo-container">
+                                <img class="command-logo" src="img/commands/admiral.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row h-card mt-3">
+                    <div class="card-left col-1">
+                        <p class="card-number mt-4">#281</p>
+                        <p class="card-date mt-1">03.11.2022</p>
+                    </div>
+                    <div class="card-left-command col-4">
+                        <div class="row h-100">
+                            <div class="col-2 command-logo-container">
+                                <img class="command-logo" src="img/commands/neftehimik.png" />
+                            </div>
+                            <div class="col-4 mt-4">
+                                <p class="command-name mt-3 mb-0">Нефтехимик</p>
+                                <p class="command-city mt-2">Нижнекамск</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-center col-3 text-center">
+                        <p class="card-scores mt-5">4 - 3</p>
+                    </div>
+                    <div class="card-right-command col-4">
+                        <div class="row h-100">
+                            <div class="col mt-4">
+                                <p class="command-name mt-3 mb-0">ЦСКА</p>
+                                <p class="command-city mt-2">Москва</p>
+                            </div>
+                            <div class="col-2 command-logo-container">
+                                <img class="command-logo" src="img/commands/casc.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row h-card mt-3">
+                    <div class="card-left col-1">
+                        <p class="card-number mt-4">#282</p>
+                        <p class="card-date mt-1">04.11.2022</p>
+                    </div>
+                    <div class="card-left-command col-4">
+                        <div class="row h-100">
+                            <div class="col-2 command-logo-container">
+                                <img class="command-logo" src="img/commands/tractor.png" />
+                            </div>
+                            <div class="col-4 mt-4">
+                                <p class="command-name mt-3 mb-0">Трактор</p>
+                                <p class="command-city mt-2">Челябинск</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-center col-3 text-center">
+                        <p class="card-scores mt-5">4 - 3</p>
+                    </div>
+                    <div class="card-right-command col-4">
+                        <div class="row h-100">
+                            <div class="col mt-4">
+                                <p class="command-name mt-3 mb-0">Витязь</p>
+                                <p class="command-city mt-2">Московская область</p>
+                            </div>
+                            <div class="col-2 command-logo-container">
+                                <img class="command-logo" src="img/commands/vityaz.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row h-card mt-3">
+                    <div class="card-left col-1">
+                        <p class="card-number mt-4">#284</p>
+                        <p class="card-date mt-1">04.11.2022</p>
+                    </div>
+                    <div class="card-left-command col-4">
+                        <div class="row h-100">
+                            <div class="col-2 command-logo-container">
+                                <img class="command-logo" src="img/commands/spartak.png" />
+                            </div>
+                            <div class="col-4 mt-4">
+                                <p class="command-name mt-3 mb-0">Спартак</p>
+                                <p class="command-city mt-2">Москва</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-center col-3 text-center">
+                        <p class="card-scores mt-5">1 - 3</p>
+                    </div>
+                    <div class="card-right-command col-4">
+                        <div class="row h-100">
+                            <div class="col mt-4">
+                                <p class="command-name mt-3 mb-0">Куньлунь РС</p>
+                                <p class="command-city mt-2">Пекин</p>
+                            </div>
+                            <div class="col-2 command-logo-container">
+                                <img class="command-logo" src="img/commands/kunlunrs.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row gy-4">
+                    <div class="col-lg-2 col-6 footer-links">
+                        <h4>Полезные Ссылки</h4>
+                        <ul>
+                            <li><i class="bi bi-chevron-right"></i> <a href="index.html">Главная</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="schedule.html">Расписание</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="login.html">Войти</a></li>
+                            <li><i class="bi bi-chevron-right"></i> <a href="registration.html">Регистрация</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start" id="contact">
+                        <h4>Связаться со мной</h4>
+                        <p>
+                            <strong>Discord:</strong> Suck#0948
+                        </p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="copyright">
+                <span>© Сделал Suck#0948</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script>
+    function changeSchedule(elem) {
+        let curRow, nRow, curBtn, nBtn;
+
+        if (elem.id == 'pastBtn') {
+            curRow = document.getElementById("future");
+            nRow = document.getElementById("past");
+            curBtn = document.getElementById("futureBtn");
+            nBtn = document.getElementById("pastBtn");
+        } else {
+            curRow = document.getElementById("past");
+            nRow = document.getElementById("future");
+            curBtn = document.getElementById("pastBtn");
+            nBtn = document.getElementById("futureBtn");
+        }
+
+        curRow.classList.add("d-none");
+        nRow.classList.remove("d-none");
+        
+        nBtn.classList.add("active");
+        curBtn.classList.remove("active");
+    }
+
+</script>
+
+</html>

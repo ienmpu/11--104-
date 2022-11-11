@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Сайт о Хоккее - Вход</title>
+
+    <link href="img/favicon.png" rel="icon">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    
+    <link href="css/login.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gradient-primary">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-10 col-lg-12 col-md-9">
+                <div class="card o-hidden border-0 shadow-lg my-6">
+                    <div class="card-body p-0">
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-block bg-image"></div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="alert alert-error text-center d-none" id="error">Форма входа не работает!</div>
+                                    <div class="text-center">
+                                        <h1 class="h4 text-gray-900 mb-4">Добро пожаловать назад!</h1>
+                                    </div>
+                                    <form class="user">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control-user" id="user" name="user" aria-describedby="userNameHelp" placeholder="Введите логин">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="password" class="form-control form-control-user" id="pass" name="pass" placeholder="Введите пароль">
+                                        </div>
+                                        <button class="btn btn-primary btn-user btn-block" type="submit" onclick="login(); return false;">Войти</button>
+                                    </form>
+                                    <hr>
+                                    <div class="text-center">
+                                        <a class="small" href="registration.html">Нет аккаунта? Создайте!</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    function login() {
+        document.getElementById("error").classList.remove("d-none");
+    }
+</script>
+
+</html>
